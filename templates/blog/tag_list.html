@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+{% include 'common/meta.html' %}
+
+
+<meta name="description" content="Mr.Chen&apos;s blog，老陈的个人博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mr.Chen">
+<meta property="og:url" content="https://www.xiaoqc.cn/tags/linux/index.html">
+<meta property="og:site_name" content="Mr.Chen">
+<meta property="og:description" content="Mr.Chen&apos;s blog，老陈的个人博客">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mr.Chen">
+<meta name="twitter:description" content="Mr.Chen&apos;s blog，老陈的个人博客">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.xiaoqc.cn/tags/linux/"/>
+
+
+
+
+
+  <title>Tag: {{ tag.name }} | Mr.Chen</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left ">
+    <div class="headband"></div>
+
+    {% include 'common/header.html' %}
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  
+  
+  
+  <div class="post-block tag">
+
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>{{ tag.name }}<small>Tag</small>
+        </h1>
+      </div>
+
+      
+        
+{% for blog in blogs %}
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/detail/{{ blog.url }}" itemprop="url">
+              
+                <span itemprop="name">{{ blog.title }}</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="{{ blog.create_time }}"
+              content="{{ blog.create_time }}" >
+            {{ blog.create_time|date:"m-d" }}
+        </time>
+      </div>
+
+    </header>
+  </article>
+{% endfor %}
+    </div>
+  </div>
+          </div>
+        </div>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+{% include 'common/mine.html' %}
+      </div>
+    </main>
+    {% include 'common/footer.html' %}
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+  </div>
+{% include 'common/script.html' %}
+</body>
+</html>
