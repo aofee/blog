@@ -40,7 +40,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-  <div class="container sidebar-position-left 
+  <div class="container sidebar-position-left
   page-home">
     <div class="headband"></div>
 
@@ -50,21 +50,21 @@
       <div class="main-inner">
         <div class="content-wrap">
           <div id="content" class="content">
-            
+
   <section id="posts" class="posts-expand">
-    
-      
 
-  
 
-  
-  
-  
+
+
+
+
+
+
 {% for blog in blogs %}
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article" style="background-color: #fff;">
-  
-  
-  
+
+
+
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/detail/{{ blog.url }}">
 
@@ -78,43 +78,43 @@
       <meta itemprop="name" content="Mr.Chen">
     </span>
 
-    
+
       <header class="post-header">
 
-        
-        
+
+
           <h1 class="post-title" itemprop="name headline">
-                
+
                 <a class="post-title-link" href="/detail/{{ blog.url }}" itemprop="url">{{ blog.title }}</a></h1>
-        
+
 
         <div class="post-meta">
           <span class="post-time">
-            
+
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
 
-              
+
               <time title="Post created" itemprop="dateCreated datePublished" datetime="{{ blog.create_time }}">
                 {{ blog.create_time }}
               </time>
           </span>
 
-          
+
             <span class="post-category" >
-            
+
               <span class="post-meta-divider">|</span>
-            
+
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
+
                 <span class="post-meta-item-text">in</span>
-              
+
               {% for cate in blog.category.all %}
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/category/{{ cate }}/" itemprop="url" rel="index">
+                  <a href="/categories/{{ cate.url }}/" itemprop="url" rel="index">
                     <span itemprop="name">{{ cate }}</span>
                   </a>
                 </span>
@@ -139,14 +139,14 @@
             </span>
         </div>
       </header>
-    
 
-    
-    
-    
+
+
+
+
     <div class="post-body" itemprop="articleBody">
         {{ blog.descript }}
-          
+
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/detail/{{ blog.url }}" rel="contents">
@@ -162,19 +162,19 @@
 
   </article>
 {% endfor %}
-    
-      
 
-  
 
-  
-  
-  
+
+
+
+
+
+
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
+
+
+
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.xiaoqc.cn/2018/04/FastCgi-and-PHP-fpm-cognition/">
 
@@ -188,98 +188,98 @@
       <meta itemprop="name" content="Mr.Chen">
     </span>
 
-    
+
       <header class="post-header">
 
-        
-        
+
+
           <h1 class="post-title" itemprop="name headline">
-                
+
                 <a class="post-title-link" href="/2018/04/FastCgi-and-PHP-fpm-cognition/" itemprop="url">FastCgi和PHP-fpm的认知</a></h1>
-        
+
 
         <div class="post-meta">
           <span class="post-time">
-            
+
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
+
                 <span class="post-meta-item-text">Veröffentlicht am</span>
-              
+
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-18T20:46:25+08:00">
                 2018-04-18
               </time>
-            
 
-            
 
-            
+
+
+
           </span>
 
-          
+
             <span class="post-category" >
-            
+
               <span class="post-meta-divider">|</span>
-            
+
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
+
                 <span class="post-meta-item-text">in</span>
-              
-              
+
+
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/技术/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
 
-                
-                
-                  . 
-                
-              
+
+
+                  .
+
+
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/技术/php/" itemprop="url" rel="index">
                     <span itemprop="name">php</span>
                   </a>
                 </span>
 
-                
-                
-              
+
+
+
             </span>
-          
 
-          
-            
-          
 
-          
-          
 
-          
 
-          
 
-          
+
+
+
+
+
+
+
+
+
 
         </div>
       </header>
-    
 
-    
-    
-    
+
+
+
+
     <div class="post-body" itemprop="articleBody">
 
-      
-      
 
-      
-        
-          
+
+
+
+
+
           刚开始对这个问题我也挺纠结的，看了《HTTP权威指南》后，感觉清晰了不少。
 首先，CGI是干嘛的？CGI是为了保证web server传递过来的数据是标准格式的，方便CGI程序的编写者。web server（比如说nginx）只是内容的分发者。比如，如果请求/index.html，那么web ser
           ...
@@ -290,42 +290,42 @@
             </a>
           </div>
           <!--/noindex-->
-        
-      
+
+
     </div>
-    
-    
-    
 
-    
 
-    
 
-    
+
+
+
+
+
+
 
     <footer class="post-footer">
-      
 
-      
 
-      
 
-      
-      
+
+
+
+
+
         <div class="post-eof"></div>
-      
+
     </footer>
   </div>
-  
-  
-  
+
+
+
   </article>
 
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
+
+
+
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.xiaoqc.cn/2018/01/alipay-development-process/">
 
@@ -339,87 +339,87 @@
       <meta itemprop="name" content="Mr.Chen">
     </span>
 
-    
+
       <header class="post-header">
 
-        
-        
+
+
           <h1 class="post-title" itemprop="name headline">
-                
+
                 <a class="post-title-link" href="/2018/01/alipay-development-process/" itemprop="url">支付宝支付开发流程</a></h1>
-        
+
 
         <div class="post-meta">
           <span class="post-time">
-            
+
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
+
                 <span class="post-meta-item-text">Veröffentlicht am</span>
-              
+
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-15T19:46:45+08:00">
                 2018-01-15
               </time>
-            
 
-            
 
-            
+
+
+
           </span>
 
-          
+
             <span class="post-category" >
-            
+
               <span class="post-meta-divider">|</span>
-            
+
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
+
                 <span class="post-meta-item-text">in</span>
-              
-              
+
+
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/技术/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
 
-                
-                
-              
+
+
+
             </span>
-          
 
-          
-            
-          
 
-          
-          
 
-          
 
-          
 
-          
+
+
+
+
+
+
+
+
+
 
         </div>
       </header>
-    
 
-    
-    
-    
+
+
+
+
     <div class="post-body" itemprop="articleBody">
 
-      
-      
 
-      
-        
-          
+
+
+
+
+
           接口说明alipay/sign订单信息签名
 alipay/notify接收支付宝异步通知
 alipay/trade_query订单交易状态查询
@@ -432,54 +432,54 @@ alipay/trade_query订单交易状态查询
             </a>
           </div>
           <!--/noindex-->
-        
-      
+
+
     </div>
-    
-    
-    
 
-    
 
-    
 
-    
+
+
+
+
+
+
 
     <footer class="post-footer">
-      
 
-      
 
-      
 
-      
-      
+
+
+
+
+
         <div class="post-eof"></div>
-      
+
     </footer>
   </div>
-  
-  
-  
+
+
+
   </article>
 
 
-    
+
   </section>
 
-  
+
 
 
           </div>
-          
 
 
-          
+
+
 
         </div>
-        
-          
-  
+
+
+
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
       <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
@@ -491,24 +491,24 @@ alipay/trade_query订单交易状态查询
   {% include 'common/mine.html' %}
 
 
-        
+
       </div>
     </main>
 
     {% include 'common/footer.html' %}
 
-    
+
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
 
-    
+      </div>
+
+
+
 
   </div>
 
-  
+
 
 {% include 'common/script.html' %}
 </body>

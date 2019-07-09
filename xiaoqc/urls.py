@@ -19,6 +19,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import include
 from blog import views
+from blog.sitemap import ArticleSiteMap
+
+sitemaps = {
+    'blog': ArticleSiteMap,
+}
 
 urlpatterns = [
     path('', views.index),
@@ -27,6 +32,8 @@ urlpatterns = [
     path('detail/<str:blog_url>/', views.detail),
     path('tags/', views.tags),
     path('tag/<str:tag_name>/', views.tag),
+    path('categories/<str:cate_name>/', views.cate),
+    path('categories/', views.categories),
 ]
 
 handler404 = "blog.views.page_not_found"

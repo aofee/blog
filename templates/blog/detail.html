@@ -126,10 +126,6 @@
                 {{ blog.create_time }}
               </time>
 
-
-
-
-
           </span>
 
 
@@ -146,7 +142,7 @@
 
                 {% for cate in blog.category.all %}
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/category/{{ cate }}/" itemprop="url" rel="index">
+                  <a href="/categories/{{ cate.url }}/" itemprop="url" rel="index">
                     <span itemprop="name">{{ cate }}</span>
                   </a>
                 </span>
