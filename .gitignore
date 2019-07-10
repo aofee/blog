@@ -1,3 +1,11 @@
 venv/
 
 .idea
+
+blog/__pycache__/
+
+blog/migrations/__pycache__/
+
+xiaoqc/__pycache__/
+
+db.sqlite3
