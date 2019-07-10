@@ -19,11 +19,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import include
 from blog import views
-from blog.sitemap import ArticleSiteMap
-
-sitemaps = {
-    'blog': ArticleSiteMap,
-}
 
 urlpatterns = [
     path('', views.index),
