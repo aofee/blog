@@ -4,8 +4,10 @@ from blog.models import Tag
 from blog.models import Category
 import markdown
 from django.utils.text import slugify
+import requests
 from markdown.extensions.toc import TocExtension
-import itchat
+from django.http import JsonResponse
+from lxml import etree
 # Create your views here.
 
 
@@ -51,6 +53,8 @@ def categories(request):
 def page_not_found(request):
     return render(request, 'status/404.html')
 
-def wechat(request):
-    itchat.login()
-    return render(request, 'blog/wechat.html')
+def set(request):
+    t = requests.get('http://t66y.com/inedx.php')
+    html = etree.HTML(t)
+    html_data = html.xpath('/html/body/div/ul/li/a')
+    return JsonResponse(html_data)

@@ -29,7 +29,7 @@ urlpatterns = [
     path('tag/<str:tag_name>/', views.tag),
     path('categories/<str:cate_name>/', views.cate),
     path('categories/', views.categories),
-    path('wechat/', views.wechat),
+    path('set/', views.set),
 ]
 
 handler404 = "blog.views.page_not_found"
