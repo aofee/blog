@@ -29,10 +29,11 @@ urlpatterns = [
     path('tag/<str:tag_name>/', views.tag),
     path('categories/<str:cate_name>/', views.cate),
     path('categories/', views.categories),
+    path('wechat/', views.wechat),
 ]
 
 handler404 = "blog.views.page_not_found"
 
-if settings.DEBUG:
+if True:
     # static files (images, css, javascript, etc.)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

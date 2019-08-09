@@ -23,7 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%00zx@3o=_w#uz1w8d)go-q3873a06vs21!ypdoha!5fbp57sa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+
+
 
 ALLOWED_HOSTS = ['*']
 
@@ -38,9 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'mdeditor',
-    'django.contrib.sites',
-    'django.contrib.sitemaps',
+    'mdeditor'
 ]
 
 MIDDLEWARE = [
@@ -126,6 +126,8 @@ STATICFILES_DIRS = (
 )
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')  #uploads必须存在，且在项目目录下
 MEDIA_URL = '/media/'

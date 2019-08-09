@@ -5,6 +5,7 @@ from blog.models import Category
 import markdown
 from django.utils.text import slugify
 from markdown.extensions.toc import TocExtension
+import itchat
 # Create your views here.
 
 
@@ -49,3 +50,7 @@ def categories(request):
 
 def page_not_found(request):
     return render(request, 'status/404.html')
+
+def wechat(request):
+    itchat.login()
+    return render(request, 'blog/wechat.html')
